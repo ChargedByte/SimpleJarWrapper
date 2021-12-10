@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'dev.chargedbyte'
+version '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
