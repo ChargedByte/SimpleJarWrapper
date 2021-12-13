@@ -1,0 +1,26 @@
+# Configuration specification version, this should be 1
+version: 1
+
+wrapper:
+  # Path to java executable (optional)
+  # Can be a relative path to the current working directory or an absolute path
+  javaPath: java
+  # Minimum memory allocation '-Xms' (optional)
+  minMemory: 512M
+  # Maximum memory allocation '-Xmx' (optional)
+  maxMemory: 1024M
+  # Other JVM options (optional)
+  # This can be either a list of strings or a string
+  # Preferably a list of strings
+  javaArgs:
+    - "-Djava.awt.headless=true"
+    - "-Dfile.encoding=UTF-8"
+  # Path to the jar file (required)
+  # Can be relative to current working directory or an absolute path
+  jarPath: MyServer.jar
+  # Arguments passed to the jar (optional)
+  # This can be either a list of strings or a string
+  # Preferably a list of strings
+  jarArgs:
+    - "--headless"
+    - "--server.port=8080"
